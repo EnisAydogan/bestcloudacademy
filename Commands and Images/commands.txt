@@ -1,0 +1,20 @@
+echo "# bestcloudacademy" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/EnisAydogan/bestcloudacademy.git
+git push -u origin main
+
+
+git checkout -b minor/dockerfile
+git branch
+
+git add .
+git commit -m "Dockerfile"
+git push origin minor/dockerfile
+
+docker build -t enisaydogan/bestcloudforme:v1 .
+docker push enisaydogan/bestcloudforme:v1
+docker container run -p 5000:5000 enisaydogan/bestcloudforme:v1 
+docker container ps 
