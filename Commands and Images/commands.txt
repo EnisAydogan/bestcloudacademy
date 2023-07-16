@@ -17,4 +17,4 @@ git push origin minor/dockerfile
 docker build -t enisaydogan/bestcloudforme:v1 .
 docker push enisaydogan/bestcloudforme:v1
 docker container run -p 5000:5000 enisaydogan/bestcloudforme:v1 
-docker container ps 
+docker container ps
